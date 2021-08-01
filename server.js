@@ -13,7 +13,7 @@ app.use(
 
 // Serve all the files in the '/dist' directory
 app.use(express.static("dist"));
-
-app.listen(process.env.PORT, "0.0.0.0", function() {
+var port = process.env.PORT || 8080
+app.listen(port, "0.0.0.0", function() {
   console.log("My super vue app is listening on port 8080");
 });
